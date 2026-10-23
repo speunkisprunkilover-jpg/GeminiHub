@@ -1,10 +1,10 @@
 -- ========================================================
---               ZERO GEMINI HUB v2.0 (ADVANCED AI)
---           Ultra-Smart Script Generator & Executor
+--            ZERO GEMINI HUB v3.0 (50+ AI HACKS)
+--        Ultra-Smart Script Generator & Pro Executor
 -- ========================================================
 
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "ZeroGeminiHubV2"
+ScreenGui.Name = "ZeroGeminiHubV3"
 ScreenGui.Parent = game:GetService("CoreGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -15,9 +15,9 @@ local ToggleBtn = Instance.new("TextButton")
 ToggleBtn.Name = "ZeroGeminiToggle"
 ToggleBtn.Parent = ScreenGui
 ToggleBtn.Position = UDim2.new(0.02, 0, 0.25, 0)
-ToggleBtn.Size = UDim2.new(0, 52, 0, 52)
-ToggleBtn.Text = "♊ ZERO"
-ToggleBtn.TextSize = 13
+ToggleBtn.Size = UDim2.new(0, 55, 0, 55)
+ToggleBtn.Text = "♊ ZERO\nv3.0"
+ToggleBtn.TextSize = 12
 ToggleBtn.Font = Enum.Font.SourceSansBold
 ToggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 ToggleBtn.BackgroundColor3 = Color3.fromRGB(16, 185, 129)
@@ -35,8 +35,8 @@ local MainFrame = Instance.new("Frame")
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = ScreenGui
 MainFrame.BackgroundColor3 = Color3.fromRGB(15, 23, 42)
-MainFrame.Position = UDim2.new(0.2, 0, 0.15, 0)
-MainFrame.Size = UDim2.new(0, 560, 0, 400)
+MainFrame.Position = UDim2.new(0.2, 0, 0.12, 0)
+MainFrame.Size = UDim2.new(0, 580, 0, 420)
 MainFrame.Active = true
 MainFrame.Draggable = true
 
@@ -48,7 +48,7 @@ MainCorner.Parent = MainFrame
 local TitleBar = Instance.new("TextLabel")
 TitleBar.Parent = MainFrame
 TitleBar.Size = UDim2.new(1, 0, 0, 42)
-TitleBar.Text = "   ZERO GEMINI v2.0  |  AI Engine & 3000+ Line Executor"
+TitleBar.Text = "   ZERO GEMINI v3.0  |  50+ AI Module Engine & Executor"
 TitleBar.TextColor3 = Color3.fromRGB(56, 189, 248)
 TitleBar.TextSize = 15
 TitleBar.Font = Enum.Font.SourceSansBold
@@ -63,7 +63,7 @@ TitleCorner.Parent = TitleBar
 local Sidebar = Instance.new("Frame")
 Sidebar.Parent = MainFrame
 Sidebar.Position = UDim2.new(0, 0, 0, 42)
-Sidebar.Size = UDim2.new(0, 140, 1, -42)
+Sidebar.Size = UDim2.new(0, 145, 1, -42)
 Sidebar.BackgroundColor3 = Color3.fromRGB(20, 30, 48)
 
 -- Sidebar Buttons
@@ -71,7 +71,7 @@ local Tab1Btn = Instance.new("TextButton")
 Tab1Btn.Parent = Sidebar
 Tab1Btn.Position = UDim2.new(0.08, 0, 0.06, 0)
 Tab1Btn.Size = UDim2.new(0.84, 0, 0, 36)
-Tab1Btn.Text = "🧠 Smart AI Builder"
+Tab1Btn.Text = "🧠 50+ AI Builder"
 Tab1Btn.TextColor3 = Color3.fromRGB(255, 255, 255)
 Tab1Btn.BackgroundColor3 = Color3.fromRGB(16, 185, 129)
 Tab1Btn.Font = Enum.Font.SourceSansBold
@@ -98,15 +98,15 @@ end
 -- --------------------------------------------------------
 local BuilderFrame = Instance.new("Frame")
 BuilderFrame.Parent = MainFrame
-BuilderFrame.Position = UDim2.new(0, 145, 0, 48)
-BuilderFrame.Size = UDim2.new(1, -155, 1, -58)
+BuilderFrame.Position = UDim2.new(0, 150, 0, 48)
+BuilderFrame.Size = UDim2.new(1, -160, 1, -58)
 BuilderFrame.BackgroundTransparency = 1
 
 local PromptInput = Instance.new("TextBox")
 PromptInput.Parent = BuilderFrame
 PromptInput.Position = UDim2.new(0, 0, 0, 0)
 PromptInput.Size = UDim2.new(1, 0, 0, 55)
-PromptInput.PlaceholderText = "Ask Zero Gemini anything... (e.g. 'Make me a hub with 15+ features', 'Make aimbot and esp', 'Speed and fly hub')"
+PromptInput.PlaceholderText = "Ask Zero Gemini... (e.g. 'Make me a 50+ feature hub', 'Build aimbot and esp', 'Speed and flight script')"
 PromptInput.Text = ""
 PromptInput.TextColor3 = Color3.fromRGB(255, 255, 255)
 PromptInput.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
@@ -123,7 +123,7 @@ local GenerateBtn = Instance.new("TextButton")
 GenerateBtn.Parent = BuilderFrame
 GenerateBtn.Position = UDim2.new(0, 0, 0, 62)
 GenerateBtn.Size = UDim2.new(0.68, 0, 0, 32)
-GenerateBtn.Text = "⚡ Build Code with AI"
+GenerateBtn.Text = "⚡ Build 50+ Script with AI"
 GenerateBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 GenerateBtn.BackgroundColor3 = Color3.fromRGB(16, 185, 129)
 GenerateBtn.Font = Enum.Font.SourceSansBold
@@ -150,13 +150,13 @@ GeneratedScroll.Parent = BuilderFrame
 GeneratedScroll.Position = UDim2.new(0, 0, 0, 100)
 GeneratedScroll.Size = UDim2.new(1, 0, 1, -100)
 GeneratedScroll.BackgroundColor3 = Color3.fromRGB(20, 30, 48)
-GeneratedScroll.CanvasSize = UDim2.new(0, 0, 0, 2000)
+GeneratedScroll.CanvasSize = UDim2.new(0, 0, 0, 5000)
 GeneratedScroll.ScrollBarThickness = 6
 
 local GeneratedOutput = Instance.new("TextBox")
 GeneratedOutput.Parent = GeneratedScroll
 GeneratedOutput.Size = UDim2.new(1, -10, 1, 0)
-GeneratedOutput.Text = "-- Generated smart script will output here...\n-- Type your prompt above and press 'Build Code with AI'."
+GeneratedOutput.Text = "-- Generated AI Code will appear here...\n-- Type 'Make me a 50+ feature hub' above and press Build!"
 GeneratedOutput.TextColor3 = Color3.fromRGB(56, 189, 248)
 GeneratedOutput.BackgroundTransparency = 1
 GeneratedOutput.ClearTextOnFocus = false
@@ -175,8 +175,8 @@ OutCorner.Parent = GeneratedScroll
 -- --------------------------------------------------------
 local ExecutorFrame = Instance.new("Frame")
 ExecutorFrame.Parent = MainFrame
-ExecutorFrame.Position = UDim2.new(0, 145, 0, 48)
-ExecutorFrame.Size = UDim2.new(1, -155, 1, -58)
+ExecutorFrame.Position = UDim2.new(0, 150, 0, 48)
+ExecutorFrame.Size = UDim2.new(1, -160, 1, -58)
 ExecutorFrame.BackgroundTransparency = 1
 ExecutorFrame.Visible = false
 
@@ -194,15 +194,15 @@ LineInfo.BackgroundTransparency = 1
 local EditorScroll = Instance.new("ScrollingFrame")
 EditorScroll.Parent = ExecutorFrame
 EditorScroll.Position = UDim2.new(0, 0, 0, 22)
-EditorScroll.Size = UDim2.new(1, 0, 0, 230)
+EditorScroll.Size = UDim2.new(1, 0, 0, 250)
 EditorScroll.BackgroundColor3 = Color3.fromRGB(20, 30, 48)
-EditorScroll.CanvasSize = UDim2.new(0, 0, 0, 5000)
+EditorScroll.CanvasSize = UDim2.new(0, 0, 0, 8000)
 EditorScroll.ScrollBarThickness = 6
 
 local CodeEditor = Instance.new("TextBox")
 CodeEditor.Parent = EditorScroll
 CodeEditor.Size = UDim2.new(1, -10, 1, 0)
-CodeEditor.PlaceholderText = "-- Paste or write your custom code here (Capacity up to 3000+ lines)..."
+CodeEditor.PlaceholderText = "-- Paste or edit code here (Supports 3000+ lines)..."
 CodeEditor.Text = ""
 CodeEditor.TextColor3 = Color3.fromRGB(255, 255, 255)
 CodeEditor.BackgroundTransparency = 1
@@ -219,7 +219,7 @@ EdCorner.Parent = EditorScroll
 
 local ExecBtn = Instance.new("TextButton")
 ExecBtn.Parent = ExecutorFrame
-ExecBtn.Position = UDim2.new(0, 0, 0, 258)
+ExecBtn.Position = UDim2.new(0, 0, 0, 278)
 ExecBtn.Size = UDim2.new(0.48, 0, 0, 32)
 ExecBtn.Text = "▶ Execute"
 ExecBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -229,7 +229,7 @@ ExecBtn.TextSize = 13
 
 local ClearBtn = Instance.new("TextButton")
 ClearBtn.Parent = ExecutorFrame
-ClearBtn.Position = UDim2.new(0.52, 0, 0, 258)
+ClearBtn.Position = UDim2.new(0.52, 0, 0, 278)
 ClearBtn.Size = UDim2.new(0.48, 0, 0, 32)
 ClearBtn.Text = "🗑 Clear Editor"
 ClearBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -264,7 +264,6 @@ Tab2Btn.MouseButton1Click:Connect(function()
     Tab1Btn.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
 end)
 
--- Send Output to Executor
 SendToExecBtn.MouseButton1Click:Connect(function()
     CodeEditor.Text = GeneratedOutput.Text
     BuilderFrame.Visible = false
@@ -273,47 +272,37 @@ SendToExecBtn.MouseButton1Click:Connect(function()
     Tab1Btn.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
 end)
 
--- Line Capacity Counter
 CodeEditor:GetPropertyChangedSignal("Text"):Connect(function()
     local _, lines = string.gsub(CodeEditor.Text, "\n", "\n")
     lines = lines + 1
     LineInfo.Text = "Capacity: " .. tostring(lines) .. " / 3000+ Lines"
-    if lines > 3000 then
-        LineInfo.TextColor3 = Color3.fromRGB(239, 68, 68)
-    else
-        LineInfo.TextColor3 = Color3.fromRGB(148, 163, 184)
-    end
 end)
 
 -- --------------------------------------------------------
--- ZERO GEMINI SMART AI SCRIPT GENERATOR ENGINE
+-- ZERO GEMINI 50+ FEATURE GENERATION ENGINE
 -- --------------------------------------------------------
 
-local function GenerateSmartScript(prompt)
-    local q = string.lower(prompt)
-    
-    -- Check for multi-feature hub or 15+/21 requests
-    if string.find(q, "15") or string.find(q, "hub") or string.find(q, "hack") or string.find(q, "gui") or string.find(q, "21") or string.find(q, "all") then
-        return [[-- ========================================================
---         ZERO GEMINI AI GENERATED 15+ FEATURE HUB
+local function Generate50FeatureHub()
+    return [[-- ========================================================
+--         ZERO GEMINI AI 50+ FEATURE ULTIMATE HUB
 -- ========================================================
 
-local LibraryGUI = Instance.new("ScreenGui")
-LibraryGUI.Name = "ZeroGeminiAIHub"
-LibraryGUI.Parent = game:GetService("CoreGui")
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ZeroGemini50Hub"
+ScreenGui.Parent = game:GetService("CoreGui")
 
-local Frame = Instance.new("Frame")
-Frame.Parent = LibraryGUI
-Frame.Size = UDim2.new(0, 450, 0, 320)
-Frame.Position = UDim2.new(0.3, 0, 0.25, 0)
-Frame.BackgroundColor3 = Color3.fromRGB(15, 23, 42)
-Frame.Active = true
-Frame.Draggable = true
+local Main = Instance.new("Frame")
+Main.Parent = ScreenGui
+Main.Size = UDim2.new(0, 520, 0, 360)
+Main.Position = UDim2.new(0.25, 0, 0.2, 0)
+Main.BackgroundColor3 = Color3.fromRGB(15, 23, 42)
+Main.Active = true
+Main.Draggable = true
 
 local Title = Instance.new("TextLabel")
-Title.Parent = Frame
-Title.Size = UDim2.new(1, 0, 0, 35)
-Title.Text = "  ♊ Zero Gemini Generated Hub (16 Modules)"
+Title.Parent = Main
+Title.Size = UDim2.new(1, 0, 0, 38)
+Title.Text = "  ♊ Zero Gemini Mega Hub - 50 Active Hacks"
 Title.TextColor3 = Color3.fromRGB(56, 189, 248)
 Title.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
 Title.Font = Enum.Font.SourceSansBold
@@ -321,51 +310,43 @@ Title.TextSize = 14
 Title.TextXAlignment = Enum.TextXAlignment.Left
 
 local Scroll = Instance.new("ScrollingFrame")
-Scroll.Parent = Frame
+Scroll.Parent = Main
 Scroll.Position = UDim2.new(0, 10, 0, 45)
 Scroll.Size = UDim2.new(1, -20, 1, -55)
 Scroll.BackgroundTransparency = 1
-Scroll.CanvasSize = UDim2.new(0, 0, 0, 680)
+Scroll.CanvasSize = UDim2.new(0, 0, 0, 2100)
+Scroll.ScrollBarThickness = 6
 
-local function AddBtn(name, y, cb)
-    local b = Instance.new("TextButton")
-    b.Parent = Scroll
-    b.Position = UDim2.new(0, 0, 0, y)
-    b.Size = UDim2.new(1, 0, 0, 32)
-    b.Text = name
-    b.TextColor3 = Color3.fromRGB(255, 255, 255)
-    b.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
-    b.Font = Enum.Font.SourceSans
-    b.TextSize = 13
-    b.MouseButton1Click:Connect(cb)
+local function AddButton(name, yPos, callback)
+    local btn = Instance.new("TextButton")
+    btn.Parent = Scroll
+    btn.Position = UDim2.new(0, 0, 0, yPos)
+    btn.Size = UDim2.new(1, -10, 0, 32)
+    btn.Text = name
+    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btn.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
+    btn.Font = Enum.Font.SourceSans
+    btn.TextSize = 13
+    btn.MouseButton1Click:Connect(callback)
+    
     local c = Instance.new("UICorner")
     c.CornerRadius = UDim.new(0, 6)
-    c.Parent = b
+    c.Parent = btn
 end
 
--- Feature 1: WalkSpeed 50
-AddBtn("1. Speed Boost (50 WalkSpeed)", 0, function()
-    pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50 end)
-end)
+-- --------------------------------------------------------
+-- MOVEMENT MODULES (1 - 10)
+-- --------------------------------------------------------
+AddButton("1. WalkSpeed: 50 Boost", 0, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50 end) end)
+AddButton("2. WalkSpeed: 120 Extreme Boost", 38, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120 end) end)
+AddButton("3. WalkSpeed: 250 Hyper Speed", 76, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250 end) end)
+AddButton("4. Reset WalkSpeed (16)", 114, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16 end) end)
+AddButton("5. JumpPower: 100 Boost", 152, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100 end) end)
+AddButton("6. JumpPower: 200 Mega Jump", 190, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200 end) end)
+AddButton("7. Reset JumpPower (50)", 228, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50 end) end)
 
--- Feature 2: Extreme Speed 150
-AddBtn("2. Extreme Speed (150 WalkSpeed)", 38, function()
-    pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 150 end)
-end)
-
--- Feature 3: Reset Speed
-AddBtn("3. Reset WalkSpeed (16)", 76, function()
-    pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16 end)
-end)
-
--- Feature 4: High Jump (120 JumpPower)
-AddBtn("4. High Jump Boost (120 JumpPower)", 114, function()
-    pcall(function() game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120 end)
-end)
-
--- Feature 5: Infinite Jump Toggle
 local infJ = false
-AddBtn("5. Toggle Infinite Jump", 152, function()
+AddButton("8. Toggle Infinite Air Jump", 266, function()
     infJ = not infJ
     game:GetService("UserInputService").JumpRequest:Connect(function()
         if infJ and game.Players.LocalPlayer.Character then
@@ -374,9 +355,8 @@ AddBtn("5. Toggle Infinite Jump", 152, function()
     end)
 end)
 
--- Feature 6: Flight Mode
 local fly = false
-AddBtn("6. Toggle Flight Mode", 190, function()
+AddButton("9. Toggle Flight Engine", 304, function()
     fly = not fly
     local hrp = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
     if hrp then
@@ -384,7 +364,7 @@ AddBtn("6. Toggle Flight Mode", 190, function()
             local bv = Instance.new("BodyVelocity")
             bv.Name = "AIFly"
             bv.MaxForce = Vector3.new(1e6,1e6,1e6)
-            bv.Velocity = Vector3.new(0, 45, 0)
+            bv.Velocity = Vector3.new(0, 50, 0)
             bv.Parent = hrp
         else
             if hrp:FindFirstChild("AIFly") then hrp.AIFly:Destroy() end
@@ -392,9 +372,8 @@ AddBtn("6. Toggle Flight Mode", 190, function()
     end
 end)
 
--- Feature 7: Noclip Through Walls
 local nc = false
-AddBtn("7. Toggle Noclip (Walk Through Walls)", 228, function()
+AddButton("10. Toggle Noclip (Walk Through Walls)", 342, function()
     nc = not nc
     game:GetService("RunService").Stepped:Connect(function()
         if nc and game.Players.LocalPlayer.Character then
@@ -405,13 +384,37 @@ AddBtn("7. Toggle Noclip (Walk Through Walls)", 228, function()
     end)
 end)
 
--- Feature 8: Player ESP Highlights
-local esp = false
-AddBtn("8. Toggle Player Wallhack (ESP)", 266, function()
-    esp = not esp
+-- --------------------------------------------------------
+-- PHYSICS & ENVIRONMENT MODULES (11 - 20)
+-- --------------------------------------------------------
+AddButton("11. Set Low Gravity (25)", 380, function() workspace.Gravity = 25 end)
+AddButton("12. Set Zero Gravity (0)", 418, function() workspace.Gravity = 0 end)
+AddButton("13. Set Heavy Gravity (500)", 456, function() workspace.Gravity = 500 end)
+AddButton("14. Reset Default Gravity (196.2)", 494, function() workspace.Gravity = 196.2 end)
+AddButton("15. Enable Fullbright Night Vision", 532, function()
+    local l = game:GetService("Lighting")
+    l.Brightness = 3
+    l.ClockTime = 14
+    l.GlobalShadows = false
+end)
+AddButton("16. Remove Fog & Darkness", 570, function()
+    local l = game:GetService("Lighting")
+    l.FogEnd = 100000
+end)
+AddButton("17. Night Mode (ClockTime 0)", 608, function() game:GetService("Lighting").ClockTime = 0 end)
+AddButton("18. Day Mode (ClockTime 12)", 646, function() game:GetService("Lighting").ClockTime = 12 end)
+AddButton("19. Disable Global Shadows", 684, function() game:GetService("Lighting").GlobalShadows = false end)
+AddButton("20. Enable Global Shadows", 722, function() game:GetService("Lighting").GlobalShadows = true end)
+
+-- --------------------------------------------------------
+-- VISUALS & ESP MODULES (21 - 30)
+-- --------------------------------------------------------
+local espOn = false
+AddButton("21. Toggle Player ESP Highlights", 760, function()
+    espOn = not espOn
     for _, p in pairs(game.Players:GetPlayers()) do
         if p ~= game.Players.LocalPlayer and p.Character then
-            if esp then
+            if espOn then
                 if not p.Character:FindFirstChild("AIESP") then
                     local h = Instance.new("Highlight")
                     h.Name = "AIESP"
@@ -425,9 +428,102 @@ AddBtn("8. Toggle Player Wallhack (ESP)", 266, function()
     end
 end)
 
--- Feature 9: Camera Aimbot Lock
+AddButton("22. Rainbow Chams ESP", 798, function()
+    for _, p in pairs(game.Players:GetPlayers()) do
+        if p ~= game.Players.LocalPlayer and p.Character then
+            local h = p.Character:FindFirstChild("AIESP") or Instance.new("Highlight")
+            h.Name = "AIESP"
+            h.FillColor = Color3.fromRGB(math.random(0,255), math.random(0,255), math.random(0,255))
+            h.Parent = p.Character
+        end
+    end
+end)
+
+AddButton("23. Enable Name Tags Above Players", 836, function()
+    for _, p in pairs(game.Players:GetPlayers()) do
+        if p ~= game.Players.LocalPlayer and p.Character and p.Character:FindFirstChild("Head") then
+            local bb = Instance.new("BillboardGui")
+            bb.Size = UDim2.new(0, 100, 0, 30)
+            bb.Adornee = p.Character.Head
+            bb.AlwaysOnTop = true
+            local lbl = Instance.new("TextLabel", bb)
+            lbl.Size = UDim2.new(1,0,1,0)
+            lbl.Text = p.Name
+            lbl.TextColor3 = Color3.fromRGB(255,255,255)
+            bb.Parent = p.Character.Head
+        end
+    end
+end)
+
+AddButton("24. Expand Player Hitboxes (Head)", 874, function()
+    for _, p in pairs(game.Players:GetPlayers()) do
+        if p ~= game.Players.LocalPlayer and p.Character and p.Character:FindFirstChild("Head") then
+            p.Character.Head.Size = Vector3.new(5, 5, 5)
+            p.Character.Head.Transparency = 0.5
+        end
+    end
+end)
+
+AddButton("25. Reset Hitbox Sizes", 912, function()
+    for _, p in pairs(game.Players:GetPlayers()) do
+        if p ~= game.Players.LocalPlayer and p.Character and p.Character:FindFirstChild("Head") then
+            p.Character.Head.Size = Vector3.new(1.2, 1.2, 1.2)
+            p.Character.Head.Transparency = 0
+        end
+    end
+end)
+
+AddButton("26. FOV 90 Degrees", 950, function() workspace.CurrentCamera.FieldOfView = 90 end)
+AddButton("27. FOV 120 Degrees (Max Widescreen)", 988, function() workspace.CurrentCamera.FieldOfView = 120 end)
+AddButton("28. FOV Reset (70)", 1026, function() workspace.CurrentCamera.FieldOfView = 70 end)
+AddButton("29. Invisible Body Local Visual", 1064, function()
+    if game.Players.LocalPlayer.Character then
+        for _, p in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if p:IsA("BasePart") then p.Transparency = 0.7 end
+        end
+    end
+end)
+AddButton("30. Restore Visible Body", 1102, function()
+    if game.Players.LocalPlayer.Character then
+        for _, p in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if p:IsA("BasePart") then p.Transparency = 0 end
+        end
+    end
+end)
+
+-- --------------------------------------------------------
+-- COMBAT & AIM MODULES (31 - 40)
+-- --------------------------------------------------------
 local aim = false
-AddBtn("9. Toggle Camera Lock Aimbot", 304, function()
+AddButton("31. Toggle Camera Lock Aimbot", 1140, function()
+    aim = not aim
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if aim then
+            local closest = nil
+            local maxDist = math.huge
+            for _, p in pairs(game.Players:GetPlayers()) do
+                if p ~= game.Players.LocalPlayer and p.Character and p.Character:FindFirstChild("Head") then
+                    local dist = (p.Character.Head.Position - game.Players.LocalPlayer.Character.Head.PoAddButton("28. FOV Reset (70)", 1026, function() workspace.CurrentCamera.FieldOfView = 70 end)
+AddButton("29. Invisible Body Local Visual", 1064, function()
+    if game.Players.LocalPlayer.Character then
+        for _, p in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if p:IsA("BasePart") then p.Transparency = 0.7 end
+        end
+    end
+end)
+AddButton("30. Restore Visible Body", 1102, function()
+    if game.Players.LocalPlayer.Character then
+        for _, p in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if p:IsA("BasePart") then p.Transparency = 0 end
+        end
+    end
+end)
+
+-- --------------------------------------------------------
+-- COMBAT & AIM MODULES (31 - 40)
+-- --------------------------------------------------------
+local aim = false
+AddButton("31. Toggle Camera Lock Aimbot", 1140, function()
     aim = not aim
     game:GetService("RunService").RenderStepped:Connect(function()
         if aim then
@@ -449,40 +545,37 @@ AddBtn("9. Toggle Camera Lock Aimbot", 304, function()
     end)
 end)
 
--- Feature 10: Click Teleport Tool
-AddBtn("10. Get Click-Teleport Tool", 342, function()
+AddButton("32. Get Click Teleport Tool", 1178, function()
     local m = game.Players.LocalPlayer:GetMouse()
     local t = Instance.new("Tool")
-    t.Name = "AI Teleport Tool"
+    t.Name = "AI TP Tool"
     t.RequiresHandle = false
     t.Activated:Connect(function()
-        if game.Players.LocalPlayer.Character then
-            game.Players.LocalPlayer.Character:MoveTo(m.Hit.p)
-        end
+        if game.Players.LocalPlayer.Character then game.Players.LocalPlayer.Character:MoveTo(m.Hit.p) end
     end)
     t.Parent = game.Players.LocalPlayer.Backpack
 end)
 
--- Feature 11: Low Gravity Mode
-AddBtn("11. Enable Low Gravity", 380, function()
-    workspace.Gravity = 40
+AddButton("33. Teleport to Random Player", 1216, function()
+    local plrs = game.Players:GetPlayers()
+    if #plrs > 1 then
+        local t = plrs[math.random(1, #plrs)]
+        if t ~= game.Players.LocalPlayer and t.Character and t.Character:FindFirstChild("HumanoidRootPart") then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = t.Character.HumanoidRootPart.CFrame
+        end
+    end
 end)
 
--- Feature 12: Reset Gravity
-AddBtn("12. Reset Normal Gravity", 418, function()
-    workspace.Gravity = 196.2
+AddButton("34. Anti-AFK Kick Protection", 1254, function()
+    local vu = game:GetService("VirtualUser")
+    game.Players.LocalPlayer.Idled:Connect(function()
+        vu:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+        task.wait(1)
+        vu:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+    end)
 end)
 
--- Feature 13: Fullbright Night Vision
-AddBtn("13. Enable Fullbright", 456, function()
-    local l = game:GetService("Lighting")
-    l.Brightness = 2
-    l.ClockTime = 14
-    l.GlobalShadows = false
-end)
-
--- Feature 14: Give Building Tools (BTools)
-AddBtn("14. Give Building Tools (BTools)", 494, function()
+AddButton("35. BTools (Delete/Grab/Clone)", 1292, function()
     local bp = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
     if bp then
         Instance.new("HopperBin", bp).BinType = Enum.BinType.Hammer
@@ -491,113 +584,88 @@ AddBtn("14. Give Building Tools (BTools)", 494, function()
     end
 end)
 
--- Feature 15: Teleport to Random Player
-AddBtn("15. Teleport to Random Player", 532, function()
-    local plrs = game.Players:GetPlayers()
-    if #plrs > 1 then
-        local target = plrs[math.random(1, #plrs)]
-        if target ~= game.Players.LocalPlayer and target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
-        end
+AddButton("36. SpinBot Toggle", 1330, function()
+    local spin = Instance.new("BodyAngularVelocity")
+    spin.Name = "AISpin"
+    spin.AngularVelocity = Vector3.new(0, 50, 0)
+    spin.MaxTorque = Vector3.new(0, math.huge, 0)
+    spin.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+end)
+
+AddButton("37. Stop SpinBot", 1368, function()
+    local hrp = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+    if hrp and hrp:FindFirstChild("AISpin") then hrp.AISpin:Destroy() end
+end)
+
+AddButton("38. Infinite Zoom In/Out Distance", 1406, function()
+    game.Players.LocalPlayer.CameraMaxZoomDistance = 100000
+end)
+
+AddButton("39. Sit Character State", 1444, function()
+    if game.Players.LocalPlayer.Character then game.Players.LocalPlayer.Character.Humanoid.Sit = true end
+end)
+
+AddButton("40. Unsit / Stand Up", 1482, function()
+    if game.Players.LocalPlayer.Character then game.Players.LocalPlayer.Character.Humanoid.Sit = false end
+end)
+
+-- --------------------------------------------------------
+-- UTILITY & SERVER TOOLS (41 - 50)
+-- --------------------------------------------------------
+AddButton("41. Rejoin Same Server", 1520, function()
+    game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+end)
+
+AddButton("42. Server Hop (Join New Server)", 1558, function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+end)
+
+AddButton("43. Load Infinite Yield Admin Panel", 1596, function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+AddButton("44. Copy Current Position CFrame", 1634, function()
+    if setclipboard and game.Players.LocalPlayer.Character then
+        setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame))
     end
 end)
 
--- Feature 16: Anti-AFK Protection
-AddBtn("16. Enable Anti-AFK Disconnect", 570, function()
-    local vu = game:GetService("VirtualUser")
-    game.Players.LocalPlayer.Idled:Connect(function()
-        vu:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
-        task.wait(1)
-        vu:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
-    end)
+AddButton("45. Copy Game Place ID", 1672, function()
+    if setclipboard then setclipboard(tostring(game.PlaceId)) end
+end)
+
+AddButton("46. Copy Game Job ID", 1710, function()
+    if setclipboard then setclipboard(tostring(game.JobId)) end
+end)
+
+AddButton("47. Respawn / Reset Character", 1748, function()
+    if game.Players.LocalPlayer.Character then game.Players.LocalPlayer.Character.Humanoid.Health = 0 end
+end)
+
+AddButton("48. Clear All Backpack Tools", 1786, function()
+    game.Players.LocalPlayer.Backpack:ClearAllChildren()
+end)
+
+AddButton("49. Teleport to World Spawn", 1824, function()
+    if workspace:FindFirstChildOfClass("SpawnLocation") then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace:FindFirstChildOfClass("SpawnLocation").CFrame * CFrame.new(0,3,0)
+    end
+end)
+
+AddButton("50. Destroy Gemini Hub GUI", 1862, function()
+    ScreenGui:Destroy()
 end)]]
-
-    elseif string.find(q, "aimbot") or string.find(q, "aim") or string.find(q, "lock") then
-        return [[-- Zero Gemini Smart AI: Camera Lock Aimbot Module
-local player = game.Players.LocalPlayer
-local camera = workspace.CurrentCamera
-local runService = game:GetService("RunService")
-
-_G.AimbotEnabled = true
-
-runService.RenderStepped:Connect(function()
-    if _G.AimbotEnabled then
-        local target = nil
-        local shortestDistance = math.huge
-        
-        for _, p in pairs(game.Players:GetPlayers()) do
-            if p ~= player and p.Character and p.Character:FindFirstChild("Head") then
-                local pos, onScreen = camera:WorldToViewportPoint(p.Character.Head.Position)
-                if onScreen then
-                    local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(camera.ViewportSize.X/2, camera.ViewportSize.Y/2)).Magnitude
-                    if magnitude < shortestDistance then
-                        shortestDistance = magnitude
-                        target = p.Character.Head
-                    end
-                end
-            end
-        end
-        
-        if target then
-            camera.CFrame = CFrame.new(camera.CFrame.Position, target.Position)
-        end
-    end
-end)
-print("Zero Gemini AI: Camera Lock Aimbot Loaded!")]]
-
-    elseif string.find(q, "esp") or string.find(q, "wallhack") or string.find(q, "highlight") then
-        return [[-- Zero Gemini Smart AI: Universal ESP    elseif string.find(q, "esp") or string.find(q, "wallhack") or string.find(q, "highlight") then
-        return [[-- Zero Gemini Smart AI: Universal ESP Module
-local function applyESP(plr)
-    if plr ~= game.Players.LocalPlayer and plr.Character then
-        if not plr.Character:FindFirstChild("ZeroESP") then
-            local hl = Instance.new("Highlight")
-            hl.Name = "ZeroESP"
-            hl.FillColor = Color3.fromRGB(56, 189, 248)
-            hl.OutlineColor = Color3.fromRGB(16, 185, 129)
-            hl.Parent = plr.Character
-        end
-    end
 end
 
-for _, p in pairs(game.Players:GetPlayers()) do
-    applyESP(p)
-    p.CharacterAdded:Connect(function()
-        task.wait(0.5)
-        applyESP(p)
-    end)
-end
-
-game.Players.PlayerAdded:Connect(function(p)
-    p.CharacterAdded:Connect(function()
-        task.wait(0.5)
-        applyESP(p)
-    end)
-end)
-print("Zero Gemini AI: Universal ESP Active!")]]
-
-    else
-        return [[-- Zero Gemini Smart AI: Custom Utility Module
-local player = game.Players.LocalPlayer
-if player.Character and player.Character:FindFirstChild("Humanoid") then
-    player.Character.Humanoid.WalkSpeed = 60
-    player.Character.Humanoid.JumpPower = 120
-    print("Zero Gemini AI: Speed & Jump boosted!")
-end]]
-    end
-end
-
--- Trigger Generator
 GenerateBtn.MouseButton1Click:Connect(function()
     if PromptInput.Text ~= "" then
-        GenerateBtn.Text = "🧠 Zero Gemini AI Thinking..."
+        GenerateBtn.Text = "🧠 Generating 50+ Module Engine..."
         task.wait(0.3)
-        GeneratedOutput.Text = GenerateSmartScript(PromptInput.Text)
-        GenerateBtn.Text = "⚡ Build Code with AI"
+        GeneratedOutput.Text = Generate50FeatureHub()
+        GenerateBtn.Text = "⚡ Build 50+ Script with AI"
     end
 end)
 
--- Execute Code Button
 ExecBtn.MouseButton1Click:Connect(function()
     if CodeEditor.Text ~= "" then
         local fn, err = loadstring(CodeEditor.Text)
@@ -615,7 +683,6 @@ ExecBtn.MouseButton1Click:Connect(function()
     end
 end)
 
--- Clear Button
 ClearBtn.MouseButton1Click:Connect(function()
     CodeEditor.Text = ""
 end)
