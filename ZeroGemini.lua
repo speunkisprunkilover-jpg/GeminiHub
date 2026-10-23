@@ -1,5 +1,5 @@
 -- ========================================================
---            ZERO GEMINI HUB v3.0 (50+ AI HACKS)
+--            ZERO GEMINI HUB v3.0 (FIXED)
 --        Ultra-Smart Script Generator & Pro Executor
 -- ========================================================
 
@@ -106,7 +106,7 @@ local PromptInput = Instance.new("TextBox")
 PromptInput.Parent = BuilderFrame
 PromptInput.Position = UDim2.new(0, 0, 0, 0)
 PromptInput.Size = UDim2.new(1, 0, 0, 55)
-PromptInput.PlaceholderText = "Ask Zero Gemini... (e.g. 'Make me a 50+ feature hub', 'Build aimbot and esp', 'Speed and flight script')"
+PromptInput.PlaceholderText = "Ask Zero Gemini... (e.g. 'Make me a 50+ feature hub', 'Build aimbot and esp')"
 PromptInput.Text = ""
 PromptInput.TextColor3 = Color3.fromRGB(255, 255, 255)
 PromptInput.BackgroundColor3 = Color3.fromRGB(30, 41, 59)
@@ -171,7 +171,7 @@ OutCorner.CornerRadius = UDim.new(0, 6)
 OutCorner.Parent = GeneratedScroll
 
 -- --------------------------------------------------------
--- TAB 2: PRO EXECUTOR (3000+ LINES CAPACITY)
+-- TAB 2: PRO EXECUTOR
 -- --------------------------------------------------------
 local ExecutorFrame = Instance.new("Frame")
 ExecutorFrame.Parent = MainFrame
@@ -244,7 +244,7 @@ for _, b in pairs({ExecBtn, ClearBtn}) do
 end
 
 -- --------------------------------------------------------
--- NAVIGATION & MONITORING LOGIC
+-- LOGIC & HANDLERS
 -- --------------------------------------------------------
 ToggleBtn.MouseButton1Click:Connect(function()
     MainFrame.Visible = not MainFrame.Visible
@@ -278,15 +278,9 @@ CodeEditor:GetPropertyChangedSignal("Text"):Connect(function()
     LineInfo.Text = "Capacity: " .. tostring(lines) .. " / 3000+ Lines"
 end)
 
--- --------------------------------------------------------
--- ZERO GEMINI 50+ FEATURE GENERATION ENGINE
--- --------------------------------------------------------
-
+-- AI GENERATION ENGINE
 local function Generate50FeatureHub()
-    return [[-- ========================================================
---         ZERO GEMINI AI 50+ FEATURE ULTIMATE HUB
--- ========================================================
-
+    return [[
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ZeroGemini50Hub"
 ScreenGui.Parent = game:GetService("CoreGui")
@@ -334,9 +328,7 @@ local function AddButton(name, yPos, callback)
     c.Parent = btn
 end
 
--- --------------------------------------------------------
--- MOVEMENT MODULES (1 - 10)
--- --------------------------------------------------------
+-- MOVEMENT
 AddButton("1. WalkSpeed: 50 Boost", 0, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50 end) end)
 AddButton("2. WalkSpeed: 120 Extreme Boost", 38, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120 end) end)
 AddButton("3. WalkSpeed: 250 Hyper Speed", 76, function() pcall(function() game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 250 end) end)
@@ -384,9 +376,7 @@ AddButton("10. Toggle Noclip (Walk Through Walls)", 342, function()
     end)
 end)
 
--- --------------------------------------------------------
--- PHYSICS & ENVIRONMENT MODULES (11 - 20)
--- --------------------------------------------------------
+-- ENVIRONMENT
 AddButton("11. Set Low Gravity (25)", 380, function() workspace.Gravity = 25 end)
 AddButton("12. Set Zero Gravity (0)", 418, function() workspace.Gravity = 0 end)
 AddButton("13. Set Heavy Gravity (500)", 456, function() workspace.Gravity = 500 end)
@@ -397,18 +387,13 @@ AddButton("15. Enable Fullbright Night Vision", 532, function()
     l.ClockTime = 14
     l.GlobalShadows = false
 end)
-AddButton("16. Remove Fog & Darkness", 570, function()
-    local l = game:GetService("Lighting")
-    l.FogEnd = 100000
-end)
+AddButton("16. Remove Fog & Darkness", 570, function() game:GetService("Lighting").FogEnd = 100000 end)
 AddButton("17. Night Mode (ClockTime 0)", 608, function() game:GetService("Lighting").ClockTime = 0 end)
 AddButton("18. Day Mode (ClockTime 12)", 646, function() game:GetService("Lighting").ClockTime = 12 end)
 AddButton("19. Disable Global Shadows", 684, function() game:GetService("Lighting").GlobalShadows = false end)
 AddButton("20. Enable Global Shadows", 722, function() game:GetService("Lighting").GlobalShadows = true end)
 
--- --------------------------------------------------------
--- VISUALS & ESP MODULES (21 - 30)
--- --------------------------------------------------------
+-- VISUALS & ESP
 local espOn = false
 AddButton("21. Toggle Player ESP Highlights", 760, function()
     espOn = not espOn
@@ -491,37 +476,7 @@ AddButton("30. Restore Visible Body", 1102, function()
     end
 end)
 
--- --------------------------------------------------------
--- COMBAT & AIM MODULES (31 - 40)
--- --------------------------------------------------------
-local aim = false
-AddButton("31. Toggle Camera Lock Aimbot", 1140, function()
-    aim = not aim
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if aim then
-            local closest = nil
-            local maxDist = math.huge
-            for _, p in pairs(game.Players:GetPlayers()) do
-                if p ~= game.Players.LocalPlayer and p.Character and p.Character:FindFirstChild("Head") then
-                    local dist = (p.Character.Head.Position - game.Players.LocalPlayer.Character.Head.PoAddButton("28. FOV Reset (70)", 1026, function() workspace.CurrentCamera.FieldOfView = 70 end)
-AddButton("29. Invisible Body Local Visual", 1064, function()
-    if game.Players.LocalPlayer.Character then
-        for _, p in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-            if p:IsA("BasePart") then p.Transparency = 0.7 end
-        end
-    end
-end)
-AddButton("30. Restore Visible Body", 1102, function()
-    if game.Players.LocalPlayer.Character then
-        for _, p in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-            if p:IsA("BasePart") then p.Transparency = 0 end
-        end
-    end
-end)
-
--- --------------------------------------------------------
--- COMBAT & AIM MODULES (31 - 40)
--- --------------------------------------------------------
+-- COMBAT & AIM
 local aim = false
 AddButton("31. Toggle Camera Lock Aimbot", 1140, function()
     aim = not aim
@@ -559,7 +514,7 @@ end)
 AddButton("33. Teleport to Random Player", 1216, function()
     local plrs = game.Players:GetPlayers()
     if #plrs > 1 then
-        local t = plrs[math.random(1, #plrs)]
+        locallocal t = plrs[math.random(1, #plrs)]
         if t ~= game.Players.LocalPlayer and t.Character and t.Character:FindFirstChild("HumanoidRootPart") then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = t.Character.HumanoidRootPart.CFrame
         end
@@ -609,9 +564,7 @@ AddButton("40. Unsit / Stand Up", 1482, function()
     if game.Players.LocalPlayer.Character then game.Players.LocalPlayer.Character.Humanoid.Sit = false end
 end)
 
--- --------------------------------------------------------
--- UTILITY & SERVER TOOLS (41 - 50)
--- --------------------------------------------------------
+-- UTILITIES & SERVERS
 AddButton("41. Rejoin Same Server", 1520, function()
     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
 end)
@@ -654,7 +607,8 @@ end)
 
 AddButton("50. Destroy Gemini Hub GUI", 1862, function()
     ScreenGui:Destroy()
-end)]]
+end)
+]]
 end
 
 GenerateBtn.MouseButton1Click:Connect(function()
